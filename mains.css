@@ -1,0 +1,313 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+body {
+    background-color: rgb(255, 211, 152);
+}
+
+.main-content {
+    padding-top: 80px; 
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+}
+
+.navbar {
+    background-color: rgb(255, 206, 101);
+    font-size: 30px;
+    margin: 0;
+}
+
+.nav-item {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.nav-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+li {
+    padding: 15px
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.natural-wonders-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.natural-wonders {
+    text-align: center;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.natural-wonders p {
+    font-size: 18px;
+    color: black;
+    margin-top: 10px;
+}
+
+.cities-culture-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.cities-culture {
+    text-align: center;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.cities-culture p {
+    font-size: 18px;
+    color: black;
+    margin-top: 10px;
+}
+
+.national-parks-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.national-parks {
+    text-align: center;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.national-parks p {
+    font-size: 18px;
+    color: black;
+    margin-top: 10px;
+}
+
+.beaches-islands-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.beaches-islands {
+    text-align: center;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.beaches-islands p {
+    font-size: 18px;
+    color: black;
+    margin-top: 10px;
+}
+
+.historic-sites-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.historic-sites {
+    text-align: center;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.historic-sites p {
+    font-size: 18px;
+    color: black;
+    margin-top: 10px;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+footer p a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    color: #fff;
+}
+
+
+@media (max-width: 1024px) {
+    .natural-wonders,
+    .cities-culture,
+    .national-parks,
+    .beaches-islands,
+    .historic-sites {
+        width: 45%;
+    }
+
+    .navbar {
+        font-size: 24px;
+    }
+
+    .nav-item {
+        padding: 10px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .header {
+        position: relative; 
+        top: 0;
+    }
+
+    body {
+        padding-top: 0; 
+    }
+
+
+    .natural-wonders,
+    .cities-culture,
+    .national-parks,
+    .beaches-islands,
+    .historic-sites {
+        width: 100%;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar {
+        position: relative; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(255, 206, 101);
+        padding: 10px 0;
+        width: 100%;
+        z-index: 10;
+    }
+    
+    ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 0;
+        margin: 0;
+    }
+    
+
+    .main-content {
+        padding-top: 100px; 
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    footer ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
