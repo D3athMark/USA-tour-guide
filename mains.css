@@ -27,6 +27,7 @@ body {
     background-color: rgb(255, 206, 101);
     font-size: 30px;
     margin: 0;
+    overflow-x: auto;
 }
 
 .nav-item {
@@ -57,16 +58,22 @@ ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
+    width: 100%;
 }
 
 li {
-    padding: 15px
+    padding: 15px;
+    white-space: nowrap;
 }
 
 a {
     text-decoration: none;
     color: black;
     font-weight: bold;
+}
+
+h2 {
+    padding-left: 20px;
 }
 
 .natural-wonders-container {
@@ -271,10 +278,10 @@ footer p a:hover {
         width: 100%;
     }
 
-    ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+
+    li {
+        padding: 8px;
+        white-space: nowrap;
     }
 
     .navbar {
@@ -283,14 +290,16 @@ footer p a:hover {
         flex-direction: column;
         align-items: center;
         background-color: rgb(255, 206, 101);
-        padding: 10px 0;
+        padding: 0;
         width: 100%;
         z-index: 10;
     }
     
     ul {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+        overflow-x: auto;
         gap: 10px;
         padding: 0;
         margin: 0;
@@ -298,7 +307,7 @@ footer p a:hover {
     
 
     .main-content {
-        padding-top: 100px; 
+        padding-top: 60px; 
     }
 
     img {
